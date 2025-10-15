@@ -1,0 +1,9 @@
+# Arquivos que a Vercel deve ignorar
+*.md
+!README.md
+.vscode
+.idea
+*.log
+IMPROVEMENTS.md
+PERFORMANCE.md
+
