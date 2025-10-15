@@ -1,4 +1,5 @@
 import { create } from 'zustand';
+import { persist, createJSONStorage } from 'zustand/middleware';
 import { User, Activity, Subject, Notification, ProgressStats } from '@/types';
 
 interface AppState {
@@ -29,7 +30,9 @@ interface AppState {
   getProgressStats: () => ProgressStats;
 }
 
-export const useStore = create<AppState>((set, get) => ({
+export const useStore = create<AppState>()(
+  persist(
+    (set, get) => ({
   // Initial user state
   user: null,
   setUser: (user) => set({ user }),
@@ -121,5 +124,17 @@ export const useStore = create<AppState>((set, get) => ({
       lateActivities,
     };
   },
-}));
+    }),
+    {
+      name: 'student-app-storage', // nome da chave no localStorage
+      storage: createJSONStorage(() => localStorage),
+      partialize: (state) => ({
+        user: state.user,
+        activities: state.activities,
+        subjects: state.subjects,
+        notifications: state.notifications,
+      }),
+    }
+  )
+);
 
