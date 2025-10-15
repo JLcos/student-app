@@ -1,0 +1,68 @@
+========================================
+COMANDOS PARA DEPLOY - COPIE E COLE
+========================================
+
+⚠️ IMPORTANTE: Substitua "SEU-USUARIO" pelo seu username do GitHub!
+
+----------------------------------------
+1. CONECTAR AO GITHUB:
+----------------------------------------
+
+git remote add origin https://github.com/SEU-USUARIO/student-app.git
+git branch -M main
+git push -u origin main
+
+
+----------------------------------------
+2. VERIFICAR SE DEU CERTO:
+----------------------------------------
+
+git remote -v
+
+
+----------------------------------------
+EXEMPLO COM USERNAME "joao123":
+----------------------------------------
+
+git remote add origin https://github.com/joao123/student-app.git
+git branch -M main
+git push -u origin main
+
+
+----------------------------------------
+SE DER ERRO "remote origin already exists":
+----------------------------------------
+
+git remote remove origin
+git remote add origin https://github.com/SEU-USUARIO/student-app.git
+git push -u origin main
+
+
+========================================
+LINKS ÚTEIS:
+========================================
+
+Criar repositório GitHub:
+https://github.com/new
+
+Deploy na Vercel:
+https://vercel.com/new
+
+Criar token do GitHub (se pedir senha):
+https://github.com/settings/tokens
+
+
+========================================
+DEPOIS DO PUSH:
+========================================
+
+1. Acesse: https://vercel.com/new
+2. Login com GitHub
+3. Selecione "student-app"
+4. Clique em "Deploy"
+5. Aguarde 2-3 minutos
+6. PRONTO! 🎉
+
+
+========================================
+
