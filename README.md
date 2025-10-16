@@ -67,6 +67,7 @@ O app utiliza o estilo **Neo-Brutalista** com:
 - **TypeScript** - Tipagem estática
 - **Tailwind CSS** - Estilização com classes utilitárias
 - **Zustand** - Gerenciamento de estado
+- **Supabase** - Banco de dados PostgreSQL + Auth (opcional)
 - **date-fns** - Manipulação de datas
 - **React Icons** - Ícones
 
@@ -85,6 +86,25 @@ npm run build
 # Iniciar produção
 npm start
 ```
+
+## 🗄️ Banco de Dados (Supabase)
+
+O app suporta duas opções de armazenamento:
+
+### Opção 1: LocalStorage (Padrão)
+- Configuração zero
+- Dados salvos no navegador
+- Ideal para desenvolvimento e testes
+
+### Opção 2: Supabase (Produção)
+- Banco de dados PostgreSQL real
+- Autenticação integrada
+- Sincronização entre dispositivos
+- Backup automático
+
+**Quick Start:** Veja [SUPABASE_QUICKSTART.md](./SUPABASE_QUICKSTART.md) (5 minutos)
+
+**Setup Completo:** Veja [SUPABASE_SETUP.md](./SUPABASE_SETUP.md)
 
 ## 🎯 Navegação
 
